@@ -11,4 +11,6 @@ deploy:
     github-token: $GITHUB_TOKEN
     keep-history: true
     on:
-        branch: master
+        branch: 11ty
+    target-branch: master # Default for this value is gh-pages, but user/organization pages are read from master so we have to add this field.
+
