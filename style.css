@@ -1,0 +1,55 @@
+
+
+
+
+
+/** Animations **/
+
+@keyframes rotate-gamepad {
+    0% {transform: rotate(0);}
+    30% {transform: rotate(375deg);}
+    40% {transform: rotate(345deg);}
+    45% {transform: rotate(360deg) scale(1.5);}
+    50% {transform: rotate(365deg) scale(0.67);}
+    55% {transform: rotate(360deg) scale(1.5);}
+    60% {transform: rotate(357deg);}
+    65% {transform: rotate(360deg);}
+    75% {transform: rotate(360deg); opacity: 1;}
+    99.9% {transform: scale(20); opacity: 0;}
+    100% {transform: scale(0); opacity: 0;}
+}
+
+@keyframes fade-output {
+    0% {}
+    85% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes timer {
+    0% {
+        left: calc(50% - 30px);
+        width: 60px;
+        border-radius: 30px / 20px;
+    }
+    100% {
+        left: 50%;
+        width: 0;
+        border-radius: 0;
+    }
+}
+
+@keyframes rotate-timer {
+    0%, 2.5% {transform: rotate(0);}
+    97.5%, 100% {transform: rotate(360deg);}
+}
+
+@keyframes walk {
+    0% {left: -300px;}
+    100% {left: calc(100% + 300px);}
+}
+
+@keyframes disappear {
+    90.01% {opacity: 1;}
+    99.99% {transform: scale(1);}
+    100% {transform: scale(0); opacity: 0;}
+}
