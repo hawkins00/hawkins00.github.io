@@ -1,1 +1,83 @@
 <h1>test 2</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hawkins, Dev</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <style>
+        html {
+            background-color: #884488;
+            padding-left: 200px;
+        }
+        h1 {
+            font-family: 'Permanent Marker', 'Alegreya Sans SC', sans-serif;
+            font-size: 100px;
+            color: #dde;
+            animation: 3s lighten;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        h1>span {
+            display: inline-block;
+        }
+        h1>span#dot-comma {
+            animation: 2s widen;
+            animation-fill-mode: forwards;
+            width: .33em;
+        }
+        h1>span#dot-comma:after {
+            content: '.';
+            animation: 3s dot-to-comma;
+            animation-fill-mode: forwards;
+        }
+        #pointer {
+            position: relative;
+            transform-origin: 0 50%;
+            left: -.3em;
+            top: .9em;
+            width: 0;
+            animation: 3s flip-finger;
+            animation-fill-mode: forwards;
+        }
+        #pointer:after {
+            content: '\1F446';
+        }
+
+       /**
+         Animations
+       **/
+        @keyframes fade-out {
+            90% {opacity: 1;}
+            100% {opacity: 0.1;}
+        }
+        @keyframes fade-out-in {
+            80% {opacity: 1; transform: scale(1);}
+            90% {opacity: 0; transform: scale(8);}
+            100% {opacity: 1; transform: scale(1);}
+        }
+        @keyframes dot-to-comma {
+            80% {content: '.'; opacity: 1;}
+            90% {content: '.'; opacity: 0;}
+            100% {content: ','; opacity: 1;}
+        }
+        @keyframes widen {
+            0% {padding-right: 0;}
+            100% {padding-right: .4em;}
+        }
+        @keyframes lighten {
+            100% {color: #fff;}
+        }
+        @keyframes flip-finger {
+            0% {transform: rotate(-7.5deg);}
+            85% {transform: rotate(7.5deg);}
+            100% {transform: rotate(0deg);}
+        }
+    </style>
+</head>
+<body>
+<h1>Hawkins<span id="dot-comma"></span><span id="pointer"></span>Dev</h1>
+<p>I&rsquo;m a software engineer looking for a challenging dev position.</p>
+<p>I will be available October 2019, but feel free to <a href="mailto:hi@hawkins.dev">contact me</a> sooner. I'm currently thru-hiking the 2,650-mile <a href="https://www.pcta.org/discover-the-trail/" title="Discover the PCT">Pacific Crest Trail</a> with my wife, Joy.</p>
+</body>
+</html>
