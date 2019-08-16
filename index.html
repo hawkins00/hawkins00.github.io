@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Hawkins, Dev | Software Engineer in Portland, OR</title>
-    <!--<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800" rel="stylesheet">-->
-    <!--
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Permanent+Marker&display=swap" rel="stylesheet">
-
 
     <style>
         html {
@@ -19,18 +13,14 @@
             max-width: 60rem;
             margin: 0 auto;
             padding: 40px 40px;
-
         }
         h1 {
-            font-family: 'Permanent Marker', 'Alegreya Sans SC', sans-serif;
+            font-family: 'Permanent Marker', sans-serif;
             font-size: 10rem;
             line-height: 1;
             margin: 0;
             min-width: 6.4rem;
-            animation: 3s lighten;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
-        }
+       }
         h1>span {
             display: inline-block;
         }
@@ -38,7 +28,7 @@
             animation: 2s widen;
             animation-delay: 1s;
             animation-fill-mode: forwards;
-            width: .33em;
+            width: .25em;
         }
         h1>span#dot-comma:after {
             content: '.';
@@ -79,15 +69,6 @@
        /**
          Animations
        **/
-        @keyframes fade-out {
-            90% {opacity: 1;}
-            100% {opacity: 0.1;}
-        }
-        @keyframes fade-out-in {
-            80% {opacity: 1; transform: scale(1);}
-            90% {opacity: 0; transform: scale(8);}
-            100% {opacity: 1; transform: scale(1);}
-        }
         @keyframes dot-to-comma {
             80% {opacity: 1; transform: scale(1);}
             90% {content: '.'; opacity: 0; transform: scale(0);}
@@ -95,10 +76,7 @@
         }
         @keyframes widen {
             0% {padding-right: 0;}
-            100% {padding-right: .4em;}
-        }
-        @keyframes lighten {
-            100% {color: #fff;}
+            100% {padding-right: .33em;}
         }
         @keyframes flip-finger {
             0% {transform: rotate(-7.5deg); opacity: 0;}
@@ -110,12 +88,13 @@
         }
     </style>
 </head>
+
 <body>
 <h1>Hawkins<span id="dot-comma"></span><span id="pointer"></span>Dev</h1>
 <p>Hi, I&rsquo;m Matt Hawkins, but everyone just calls me &ldquo;Hawkins.&rdquo; I&rsquo;m a software engineer looking for a challenging dev position in the Portland, OR area.</p>
 <p>I completed my M.S. in Computer Science (3.93 GPA) in December from Portland State University. Most of my time this year has been spent hiking the Pacific Crest Trail with my wife. We are now done, and I am looking to continue my software engineering career.</p>
-<p>I provide skills in Java, C++, Python, and Javascript. I&rsquo;m comfortable in a Linux environment (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>), and I love using Vim key bindings everywhere possible.</p>
-<p>View my <a href="https://drive.google.com/open?id=1Rs1hhzRJ0vxi9hFM03DXCke0JXvXK11r">r&eacute;sum&eacute;</a></p>
-<p><a href="mailto:hi@hawkins.dev">Contact me</a> &bullet; <a href="https://www.linkedin.com/in/matt-hawkins">My LinkedIn Profile</a></p>
+<p>I provide experience in Java, C++, and Python and a hard-working, quick-learning mentality. I&rsquo;m comfortable in Linux environments (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>), and I love using Vim key bindings everywhere possible <nobr><small>(no sarcasm 🙂)</small></nobr>.</p>
+<p>View my <a href="https://drive.google.com/open?id=1Rs1hhzRJ0vxi9hFM03DXCke0JXvXK11r">r&eacute;sum&eacute;</a> &amp; <a href="https://www.linkedin.com/in/matt-hawkins">LinkedIn profile</a></p>
+<p><a href="mailto:hi@hawkins.dev">Contact me</a></p>
 </body>
 </html>
