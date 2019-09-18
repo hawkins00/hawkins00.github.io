@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="theme-color" content="#884488">
     <title>Hawkins, Dev | Software Engineer in Portland, OR</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Permanent+Marker&display=swap" rel="stylesheet">
+    <!--
+    <link rel="icon" sizes="192x192" href="favicon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    -->
 
     <style>
+        ::selection {
+            background: rgba(0, 0, 0, 0.667);
+        }
         html {
-            background-color: #884488;
-            color: white;
+            color: #fff;
+            background-color: #848;
+            background-image: radial-gradient(at bottom, #773a77, #303);
+            background-position: center -100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Nunito Sans', sans-serif;
             font-size: 62.5%;
             min-font-size: 10px;
-            max-width: 60rem;
+            min-height: 100%;
+        }
+        body {
+            max-width: 68rem;
             margin: 0 auto;
             padding: 4rem 4rem;
         }
@@ -21,6 +38,7 @@
             line-height: 1;
             margin: 0;
             min-width: 6.4rem;
+            text-shadow: rgba(0, 0, 0, .5) 5px 5px 1px;
        }
         h1>span {
             display: inline-block;
@@ -38,6 +56,50 @@
             display: inline-block;
             transform-origin: .1em .75em;
         }
+        h2 {
+            color: lightskyblue;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, .75);
+            margin-top: 0.75rem;
+        }
+        h3 {
+            color: lightskyblue;
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, .75);
+            margin-top: 0;
+        }
+        p, li {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, .75);
+            color: #eee;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-bottom: 1.33em;
+        }
+        li {
+            margin-bottom: .5em;
+        }
+        abbr {
+            cursor: help;
+            text-underline-position: under;
+        }
+        a {
+            text-underline-position: under;
+            text-decoration-color: #ca4;
+        }
+        a[target]:hover:after {
+            content: ' \1f5d7';
+        }
+        a:link {
+            color: #fd3;
+        }
+        a:visited {
+            color: #fd3;
+        }
+        a:hover, a:active, a:focus {
+            color: #ff3;
+            text-decoration-color: #ff6;
+            text-shadow: 0 0 4px rgba(0, 0, 0, .75);
+        }
         #pointer {
             position: relative;
             transform-origin: 0 50%;
@@ -45,34 +107,58 @@
             left: -.3em;
             top: .4em;
             width: 0;
-            animation: 4s flip-finger;
+            animation: 4s push-finger;
             animation-timing-function: ease-in-out;
             animation-fill-mode: forwards;
+            text-shadow: rgba(0, 0, 0, .25) 5px 5px 5px;
         }
         #pointer:after {
             content: '\1F446';
         }
-        p {
-            font-family: 'Nunito Sans', sans-serif;
-            font-size: 1.8rem;
-            line-height: 1.6;
-            margin-bottom: 1.33em;
+        p.contact {
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.44;
         }
-        a:link {
-            color: #ffee11;
+
+        iframe {
+            border: 0;
+            border-radius: 11px;
         }
-        a:visited {
-            color: #ffdd22;
+        section.card {
+            border-radius: 16px;
+            background-color: rgba(0, 0, 0, 0.33);
+            height: 429px;
+            width: 100%;
+            margin-bottom: 1rem;
         }
-        a:hover, a:active, a:focus {
-            color: #ffff11;
+        section.card div {
+            margin: 1rem 16px;
+            width: calc(100% - 403px);
+        }
+        section.card.left iframe {
+            float: left;
+            margin: 11px 0 11px 11px;
+        }
+        section.card.left div {
+            float: right;
+        }
+        section.card.right iframe {
+            background-color: black;"
+            float: right;
+            margin: 11px 11px 11px 0;
+            padding-top: 85px;
+            padding-bottom: 86px;
+        }
+        section.card.right div {
+            float: left;
         }
 
        /**
          Animations
        **/
         @keyframes dot-to-comma {
-            80% {opacity: 1; transform: scale(1);}
+            80% {content: '.'; opacity: 1; transform: scale(1);}
             90% {content: '.'; opacity: 0; transform: scale(0);}
             100% {content: ','; opacity: 1; transform: scale(1);}
         }
@@ -80,7 +166,7 @@
             0% {padding-right: 0;}
             100% {padding-right: .33em;}
         }
-        @keyframes flip-finger {
+        @keyframes push-finger {
             0% {transform: rotate(-7.5deg); opacity: 0;}
             20% {opacity: 0;}
             25% {opacity: 1;}
@@ -93,10 +179,42 @@
 
 <body>
 <h1>Hawkins<span id="dot-comma"></span><span id="pointer"></span>Dev</h1>
+<h2>Software Engineer in Portland, Oregon</h2>
 <p>Hi, I&rsquo;m Matt Hawkins, but everyone just calls me &ldquo;Hawkins.&rdquo; I&rsquo;m a software engineer looking for a challenging dev position in the Portland, OR area.</p>
-<p>I completed my M.S. in Computer Science (3.93 GPA) in December from Portland State University. Most of my time this year has been spent hiking the Pacific Crest Trail with my wife. We are now done, and I am looking to continue my software engineering career.</p>
-<p>I provide experience in Java, C++, and Python and a hard-working, quick-learning mentality. I love working on teams that take pride in their work and know how to ship successful products. I enjoy working in Linux environments (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>) and using Vim key bindings everywhere possible.</p>
-<p>View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a> &amp; <a href="https://www.linkedin.com/in/matt-hawkins">LinkedIn profile</a></p>
-<p><a href="mailto:hi@hawkins.dev">Contact me</a></p>
+<p>I completed my M.S. in Computer Science (3.93 GPA) in December from Portland State University. Much of my time this year has been spent hiking the Pacific Crest Trail with my wife. We are now done, and I am looking to continue my software engineering career.</p>
+<p>I provide a hard-working, quick-learning mentality along with a strong computer science background. I love working on teams that take pride in their work and know how to ship successful products that impress customers. I enjoy working in Linux environments (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>) and using Vim key bindings everywhere possible.</p>
+<p>View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a> and <a href="https://www.linkedin.com/in/matt-hawkins" target="_blank" title="Open my LinkedIn profile in a new window">LinkedIn profile</a></p>
+<p class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">📧 Contact me</a></p>
+<h2>Selected Projects</h2>
+<section class="card left">
+    <iframe width="360" height="405"
+            src="https://www.youtube-nocookie.com/embed/IN8Bb79A298?controls=0&modestbranding=1&rel=0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+    <div>
+        <h3>DGC <small>(Distributed Game Control)</small></h3>
+        <ul>
+            <li>Provides the ability to use a physical game controller to send input to a remote game</li>
+            <li>Utilized: Javascript, web sockets, Node.js, jQuery, Gamepad API, HTML, CSS</li>
+            <li><a href="https://github.com/hawkins00/dgc" target="_blank" title="Open DGC @ Github in a new window">DGC on Github</a></li>
+        </ul>
+    </div>
+</section>
+<section class="card right">
+    <iframe width="360" height="234"
+            src="https://www.youtube-nocookie.com/embed/aGUnT2SMM4A?controls=0&modestbranding=1&rel=0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+    <div>
+        <h3>imit8-chip8 <small>(a CHIP-8 VM)</small></h3>
+        <ul>
+            <li>Virtual machine written in C++ to run CHIP-8 ROM files</li>
+            <li>Wrote code simulating the CHIP-8 system (CPU, opcodes, RAM, VRAM, ROM loading)</li>
+            <li>Utilized: C++, Git, teamwork (two-person project), bit manipulation</li>
+            <li><a href="https://github.com/hawkins00/imit8-chip8" target="_blank" title="Open imit8-chip8 @ Github in a new window">imit8-chip8 on Github</a></li>
+        </ul>
+    </div>
+</section>
+<p class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">📧 Contact me</a></p>
 </body>
 </html>
