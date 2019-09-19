@@ -158,9 +158,14 @@
         section.card {
             border-radius: 16px;
             background-color: rgba(0, 0, 0, 0.33);
-            height: 429px;
-            max-width: 68rem;
+            min-height: 429px;
+            width: 100%;
             margin-bottom: 1rem;
+        }
+        section.card:after {
+            content: "";
+            display: table;
+            clear: both;
         }
         section.card div {
             margin: 1rem 16px;
@@ -189,7 +194,7 @@
                 max-width: 95%;
             }
             .contact a {
-                font-size: 4rem;
+                font-size: 4.5rem;
             }
         }
 
