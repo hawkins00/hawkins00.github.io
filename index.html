@@ -135,22 +135,10 @@
         #pointer:after {
             content: '\1F446';
         }
-        p.links span:first-child {
-            display: inline-block;
-            width: 69%;
-        }
-        p.links span:last-child {
-            display: inline-block;
-            width: 30%;
-            text-align: right;
-        }
         p.contact {
-            text-align: right;
-        }
-        .contact {
-            text-decoration: none;
         }
         .contact a {
+            text-decoration: none;
             padding: .1667em .667em;
             border: 1px solid #cccc00;
             border-radius: .33em;
@@ -196,9 +184,18 @@
             float: left;
         }
 
-       /**
-         Animations
-       **/
+        @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5) {
+            body {
+                max-width: 95%;
+            }
+            .contact a {
+                font-size: 4rem;
+            }
+        }
+
+        /**
+          Animations
+        **/
         @keyframes appear {
             100% {transform: scale(1);}
         }
@@ -237,8 +234,10 @@
 <p>Hi, I&rsquo;m Matt Hawkins, but everyone just calls me &ldquo;Hawkins.&rdquo; I&rsquo;m a software engineer looking for a challenging dev position in the Portland, OR area.</p>
 <p>I completed my M.S. in Computer Science (3.93 GPA) in December from Portland State University. Much of my time this year has been spent hiking the Pacific Crest Trail with my wife. We are now done, and I am looking to continue my software engineering career.</p>
 <p>I provide a hard-working, quick-learning mentality along with a strong computer science background. I love working on teams that take pride in their work and know how to ship successful products that impress customers. I enjoy working in Linux environments (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>) and using Vim key bindings everywhere possible.</p>
-<p class="links"><span>View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a> and <a href="https://www.linkedin.com/in/matt-hawkins" target="_blank" title="View my LinkedIn profile in a new window">LinkedIn profile</a></span>
-    <span class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">Contact me</a></span></p>
+<p class="links">View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a> and <a href="https://www.linkedin.com/in/matt-hawkins" target="_blank" title="View my LinkedIn profile in a new window">LinkedIn profile</a></p>
+<!--
+<p class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">Contact me</a></p>
+-->
 <h2>Selected Projects</h2>
 <section class="card left">
     <iframe width="360" height="405"
