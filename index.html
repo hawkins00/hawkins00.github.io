@@ -5,7 +5,7 @@
     <meta name="theme-color" content="#442244">
     <title>Hawkins, Dev | Software Engineer in Portland, OR</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="icon" sizes="192x192" href="favicon.png">
+    <link rel="shortcut icon" sizes="192x192" href="favicon.png" type="image/png">
     <!--
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,21 +99,25 @@
         }
         a {
             text-decoration: none;
-            text-shadow: 0 0 4px rgba(0, 0, 0, .75);
+            text-shadow:
+                    -1px -1px 0 #303,
+                    1px -1px 0 #303,
+                    -1px 1px 0 #303,
+                    1px 1px 0 #303;
         }
         a[target]:hover:after {
             content: ' \1f5d7';
         }
         a:link {
-            color: #fd3;
+            color: yellow;
         }
         a:visited {
-            color: #fd3;
+            color: yellow;
         }
         a:hover, a:active, a:focus {
-            color: #ff3;
+            color: orange;
             text-decoration: underline;
-            text-decoration-color: #aa3;
+            text-decoration-color: orange;
             text-underline-position: under;
         }
         #pointer {
@@ -131,10 +135,32 @@
         #pointer:after {
             content: '\1F446';
         }
+        p.links span:first-child {
+            display: inline-block;
+            width: 69%;
+        }
+        p.links span:last-child {
+            display: inline-block;
+            width: 30%;
+            text-align: right;
+        }
         p.contact {
-            font-size: 2rem;
-            font-weight: bold;
-            line-height: 1.44;
+            text-align: right;
+        }
+        .contact {
+            text-decoration: none;
+        }
+        .contact a {
+            padding: .1667em .667em;
+            border: 1px solid #cccc00;
+            border-radius: .33em;
+            display: inline-block;
+            transition-duration: .33s;
+        }
+        .contact a:hover {
+            background-color: rgba(0, 0, 0, 0.25);
+            border-color: orange;
+            text-decoration: none;
         }
 
         iframe {
@@ -211,8 +237,8 @@
 <p>Hi, I&rsquo;m Matt Hawkins, but everyone just calls me &ldquo;Hawkins.&rdquo; I&rsquo;m a software engineer looking for a challenging dev position in the Portland, OR area.</p>
 <p>I completed my M.S. in Computer Science (3.93 GPA) in December from Portland State University. Much of my time this year has been spent hiking the Pacific Crest Trail with my wife. We are now done, and I am looking to continue my software engineering career.</p>
 <p>I provide a hard-working, quick-learning mentality along with a strong computer science background. I love working on teams that take pride in their work and know how to ship successful products that impress customers. I enjoy working in Linux environments (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>) and using Vim key bindings everywhere possible.</p>
-<p>View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a> and <a href="https://www.linkedin.com/in/matt-hawkins" target="_blank" title="Open my LinkedIn profile in a new window">LinkedIn profile</a></p>
-<p class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">Contact me 📧</a></p>
+<p class="links"><span>View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a> and <a href="https://www.linkedin.com/in/matt-hawkins" target="_blank" title="View my LinkedIn profile in a new window">LinkedIn profile</a></span>
+    <span class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">Contact me</a></span></p>
 <h2>Selected Projects</h2>
 <section class="card left">
     <iframe width="360" height="405"
@@ -224,7 +250,7 @@
         <ul>
             <li>Provides the ability to use a physical game controller to send input to a remote game</li>
             <li>Utilized: Javascript, web sockets, Node.js, jQuery, Gamepad API, HTML, CSS</li>
-            <li><a href="https://github.com/hawkins00/dgc" target="_blank" title="Open DGC @ Github in a new window">DGC on Github</a></li>
+            <li><a href="https://github.com/hawkins00/dgc" target="_blank" title="View DGC @ Github in a new window">DGC on Github</a></li>
         </ul>
     </div>
 </section>
@@ -239,10 +265,10 @@
             <li>Emulator written in C++ to run CHIP-8 ROM files</li>
             <li>Wrote code simulating the CHIP-8 system (CPU, opcodes, RAM, VRAM, ROM loading)</li>
             <li>Utilized: C++, Git, teamwork (two-person project), bit manipulation</li>
-            <li><a href="https://github.com/hawkins00/imit8-chip8" target="_blank" title="Open imit8-chip8 @ Github in a new window">imit8-chip8 on Github</a></li>
+            <li><a href="https://github.com/hawkins00/imit8-chip8" target="_blank" title="View imit8-chip8 @ Github in a new window">imit8-chip8 on Github</a></li>
         </ul>
     </div>
 </section>
-<p class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">Contact me 📧</a></p>
+<p class="contact"><a href="mailto:hi@hawkins.dev" title="Contact me via email">Contact me</a></p>
 </body>
 </html>
