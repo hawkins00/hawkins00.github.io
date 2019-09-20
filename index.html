@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="theme-color" content="#330033">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawkins, Dev | Software Engineer in Portland, OR</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="shortcut icon" sizes="192x192" href="favicon.png" type="image/png">
@@ -190,9 +191,17 @@
         /**
           Mobile
         **/
-        @media screen and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5) {
+        @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5) {
+            html {
+                font-size: 50%;
+            }
             body {
                 max-width: 95%;
+                padding: 0;
+            }
+            h1 {
+                max-width: initial;
+                font-size: 6rem;
             }
             abbr {
                 text-decoration: none;
@@ -202,7 +211,7 @@
             }
             .card {
                 background-color: initial;
-                margin-bottom: 6rem;
+                margin-bottom: 3rem;
             }
             .card div {
                 margin: 0;
@@ -215,13 +224,7 @@
                 float: none;
                 margin: 0;
             }
-            .card.left iframe {
-                width: 90rem;
-                height: 101.25rem;
-            }
             .card.right iframe {
-                width: 90rem;
-                height: 70.2rem;
                 padding: 0;
             }
             .contact {
@@ -242,16 +245,6 @@
         @keyframes widen {
             100% {padding-right: .5em;}
         }
-        /*
-        @keyframes push-fingerX {
-            0% {transform: rotate(-7.5deg); opacity: 0;}
-            20% {opacity: 0;}
-            25% {opacity: 1;}
-            75% {transform: rotate(7.5deg); opacity: 1;}
-            80% {opacity: 0;}
-            100% {opacity: 0;}
-        }
-        */
         @keyframes push-finger {
             0% {transform: rotate(-7.5deg); opacity: 0;}
             20% {opacity: 0;}
