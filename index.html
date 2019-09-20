@@ -45,7 +45,7 @@
         h1>span {
             display: inline-block;
         }
-        h1>span#comma {
+        #comma {
             animation: .5s appear;
             animation-delay: 3.3s;
             animation-fill-mode: forwards;
@@ -54,7 +54,7 @@
             width: 0;
             overflow: visible;
         }
-        h1>span#dot {
+        #dot {
             animation: 2s widen;
             animation-delay: 1s;
             animation-fill-mode: forwards;
@@ -62,7 +62,7 @@
             width: .25em;
             font-size: 8rem;
         }
-        h1>span#dot:after {
+        #dot:after {
             content: '.';
             animation: 0.5s disappear;
             animation-delay: 3.3s;
@@ -194,9 +194,9 @@
         @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5) {
             body {
                 max-width: 95%;
-                padding: 2rem 0;
+                padding: 1rem 0 2rem;
             }
-            h1, h1>span#dot {
+            h1, #dot, #pointer {
                 max-width: initial;
                 font-size: 13vw;
             }
