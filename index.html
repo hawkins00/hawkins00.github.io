@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="theme-color" content="#330033">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#330033">
     <title>Hawkins, Dev | Software Engineer in Portland, OR</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="shortcut icon" sizes="192x192" href="favicon.png" type="image/png">
@@ -18,6 +18,9 @@
             color: #ccc;
         }
         html {
+            --main-link-color: darkturquoise;
+            --main-link-hov-act-foc-color: darkorange;
+            --main-heading-color: darkorange;
             color: #fff;
             background-color: #424;
             background-image: radial-gradient(at bottom, #773a77, #303);
@@ -71,15 +74,13 @@
             transform-origin: .1em .75em;
         }
         h2 {
-            color: #ccbbdd;
-            color: darkorange;
+            color: var(--main-heading-color);
             font-size: 2.5rem;
             text-shadow: .2rem .2rem 0 rgba(0, 0, 0, .75);
             margin-top: 0.75rem;
         }
         h3 {
-            color: #cccccc;
-            color: darkorange;
+            color: var(--main-heading-color);
             font-size: 2rem;
             text-shadow: .2rem .2rem 0 rgba(0, 0, 0, .75);
             margin-top: 0;
@@ -103,9 +104,10 @@
         }
         abbr {
             cursor: help;
-            text-underline-position: under;
-            text-decoration-color: #888;
-            text-decoration-style: dashed;
+            text-decoration: none;
+        }
+        .nobr {
+            white-space: nowrap;
         }
         a {
             text-decoration: none;
@@ -114,15 +116,15 @@
             content: ' \1f5d7';
         }
         a:link {
-            color: darkturquoise;
+            color: var(--main-link-color);
         }
         a:visited {
-            color: darkturquoise;
+            color: var(--main-link-color);
         }
         a:hover, a:active, a:focus {
-            color: darkorange;
+            color: var(--main-link-hov-act-foc-color);
             text-decoration: underline;
-            text-decoration-color: darkorange;
+            text-decoration-color: var(--main-link-hov-act-foc-color);
             text-underline-position: under;
         }
         #pointer {
@@ -142,7 +144,7 @@
         }
         .contact a {
             background-color: rgba(0, 0, 0, 0.2);
-            border: .2rem solid darkturquoise;
+            border: .2rem solid var(--main-link-color);
             border-radius: .5em;
             font-weight: bold;
             padding: .1667em .667em;
@@ -151,7 +153,7 @@
         }
         .contact a:hover {
             background-color: rgba(0, 0, 0, 0.1);
-            border-color: darkorange;
+            border-color: var(--main-link-hov-act-foc-color);
             text-decoration: none;
         }
 
@@ -175,19 +177,21 @@
             margin: 1rem 16px;
             width: calc(100% - 403px);
         }
+        .card iframe {
+            background-color: black;
+        }
         .card.left iframe {
             float: left;
             margin: 11px 0 11px 11px;
+            padding-top: 85px;
+            padding-bottom: 86px;
         }
         .card.left div {
             float: right;
         }
         .card.right iframe {
-            background-color: black;
             float: right;
             margin: 11px 11px 11px 0;
-            padding-top: 85px;
-            padding-bottom: 86px;
         }
         .card.right div {
             float: left;
@@ -196,7 +200,8 @@
         /**
           Mobile
         **/
-        @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5) {
+        @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5) /*,
+         screen and (max-width: 600px) and (min-resolution: 1.5dppx) */{
             body {
                 max-width: 95%;
                 padding: 1rem 0 2rem;
@@ -232,7 +237,7 @@
                 float: none;
                 margin: 0;
             }
-            .card.right iframe {
+            .card.left iframe {
                 padding: 0;
             }
             .contact {
@@ -267,13 +272,13 @@
 
 <body>
 <h1>Hawkins<span id="comma">, </span><span id="dot"></span><span id="pointer"></span>Dev</h1>
-<h2>Software Engineer in the Pacific Northwest</h2>
-<p>Hi, I&rsquo;m Matt Hawkins, but everyone just calls me &ldquo;Hawkins.&rdquo; I&rsquo;m a software engineer looking for a challenging dev position in the Portland, OR or Seattle, WA areas.</p>
+<h2>Software Engineer in <span class="nobr">Portland, OR</span></h2>
+<p>Hi, I&rsquo;m Matt Hawkins, but everyone just calls me &ldquo;Hawkins.&rdquo; I&rsquo;m a software engineer looking for a challenging dev position in the Portland, OR metro area.</p>
 <p>I completed my M.S. in Computer Science (3.93 GPA) in December from Portland State University. Much of my time this year has been spent hiking the Pacific Crest Trail with my wife. We are now done, and I am looking to continue my software engineering career.</p>
 <p>I provide a hard-working, quick-learning mentality along with a strong computer science and mathematics background. I love working on teams that take pride in their work and know how to ship successful products that impress customers. I enjoy working in Linux environments (including macOS Terminal and <abbr title="Windows Subsystem for Linux">WSL</abbr>) and using Vim key bindings everywhere possible.</p>
 <p class="links">View my <a href="https://drive.google.com/open?id=1Dqab0WDGfhIkzxP14hjnICiRJwA2QBgD">r&eacute;sum&eacute;</a>, <a href="https://www.linkedin.com/in/matt-hawkins" title="View my LinkedIn profile">LinkedIn profile</a>, or <a href="mailto:hi@hawkins.dev" title="Contact me via email">email me</a>.</p>
 <h2>Selected Projects</h2>
-<section class="card left">
+<section class="card right">
     <div>
         <h3>DGC <small>(Distributed Game Control)</small></h3>
         <ul>
@@ -287,7 +292,7 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
     </iframe>
 </section>
-<section class="card right">
+<section class="card left">
     <div>
         <h3>imit8-chip8</h3>
         <ul>
